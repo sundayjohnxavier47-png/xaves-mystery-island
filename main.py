@@ -13,13 +13,14 @@ while running:
     answer = answer.strip().lower()
     if answer == "quit":
         print(f"Goodbye {name}")
-         print(f"Energy left: {energy}")
+        print(f"Energy left: {energy}")
+        running = False
     elif answer == "north":
         print("You walk north and find a dense jungle. You hear strange noises.")
         location = "Jungle"
         energy -= 1
         print(energy)
-         print(f"Energy left: {energy}")
+        print(f"Energy left: {energy}")
     elif answer == "south":
         print("You walk south and find a dark cave. You see glowing eyes staring at you.")
         location = "Cave"
@@ -27,7 +28,7 @@ while running:
         print(energy)
         print(f"Energy left: {energy}")
     elif answer == "east":
-        print("You walk east and find an old bridge. The bridge is locked but you cannot cross it.")
+        print("You walk east and find an old bridge. The bridge is Locked, so you cannot cross it")
         location = "Old Bridge"
         energy -= 1
         print(energy)
