@@ -8,6 +8,7 @@ running = True
 print(f"Hello {name}. \nYou are at {location}")
 
 while running:
+    print(f"Location: {location} | Energy: {energy}")
     answer = input("Choose direction to walk: North, South, East, West or Quit\n the shadows are pointing south\n")
     answer = answer.strip().lower()
     if answer == "quit":
@@ -34,7 +35,7 @@ while running:
     elif answer == "west":
         print("You walk west and find a Lighthouse. The lighthouse is locked but you can see the beacon. You need to restore the beacon to signal for help.")
         location = "Lighthouse"
-        energy += 1
+        energy -= 1
         print(energy)
         print(f"Energy left: {energy}")
     else:
