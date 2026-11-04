@@ -5,10 +5,37 @@ name = name.strip()
 location = "Beach"
 energy = 5
 running = True
+print(f"Hello {name}. \nYou are at {location}")
+
 while running:
-    print(f"Hello {name}. \nYou are at {location}")
     answer = input("Choose direction to walk: North, South, East, West or Quit\n the shadows are pointing south\n")
     answer = answer.strip().lower()
     if answer == "quit":
         print(f"Goodbye {name}")
-        break
+         print(f"Energy left: {energy}")
+    elif answer == "north":
+        print("You walk north and find a dense jungle. You hear strange noises.")
+        location = "Jungle"
+        energy -= 1
+        print(energy)
+         print(f"Energy left: {energy}")
+    elif answer == "south":
+        print("You walk south and find a dark cave. You see glowing eyes staring at you.")
+        location = "Cave"
+        energy -= 1
+        print(energy)
+        print(f"Energy left: {energy}")
+    elif answer == "east":
+        print("You walk east and find an old bridge. The bridge is locked but you cannot cross it.")
+        location = "Old Bridge"
+        energy -= 1
+        print(energy)
+        print(f"Energy left: {energy}")
+    elif answer == "west":
+        print("You walk west and find a Lighthouse. The lighthouse is locked but you can see the beacon. You need to restore the beacon to signal for help.")
+        location = "Lighthouse"
+        energy += 1
+        print(energy)
+        print(f"Energy left: {energy}")
+    else:
+        print("Invalid direction. Please choose North, South, East, West or Quit.")
