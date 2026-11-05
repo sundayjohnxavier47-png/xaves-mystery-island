@@ -41,3 +41,9 @@ while running:
         print(f"Energy left: {energy}")
     else:
         print("Invalid direction. Please choose North, South, East, West or Quit.")
+    
+world = {
+    "Beach": {"north": "Jungle"},
+    "Jungle": {"south": "Beach", "north": "Cave"},
+    "Cave": {"south": "Jungle"},
+}
