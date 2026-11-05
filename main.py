@@ -1,3 +1,8 @@
+world = {
+    "Beach": {"north": "Jungle"},
+    "Jungle": {"south": "Beach", "north": "Cave"},
+    "Cave": {"south": "Jungle"},
+}
 print("*MYSTERY ISLAND*")
 print("Welcome to Mystery Island. \nYou wake up on Mystery Island after a storm. \nThe lighthouse is dark, the bridge is locked, and a rescue boat will arrive only if you restore the beacon. \nBegin your adventure in which the you explore locations, collects objects, solves simple puzzles and escape. \nTry not to run out of energy.")
 name = input("Choose a character name: ")
@@ -42,8 +47,3 @@ while running:
     else:
         print("Invalid direction. Please choose North, South, East, West or Quit.")
     
-world = {
-    "Beach": {"north": "Jungle"},
-    "Jungle": {"south": "Beach", "north": "Cave"},
-    "Cave": {"south": "Jungle"},
-}
