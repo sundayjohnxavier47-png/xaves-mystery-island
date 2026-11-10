@@ -18,9 +18,14 @@ while running:
     answer = answer.strip().lower()
     if answer == "quit":
         print(f"Goodbye {name}")
-        print(f"Energy left: {energy}")
         running = False
-    
+    elif answer in world[location]:
+        location = world[location][answer]
+        energy -= 1
+        print(f"You walk {answer} to {location}.")
+        print(f"Energy remaining: {energy}")
+    elif answer in ["north", "south", "east", "west"]:
+        print(f"You can't go {answer} from {location}.")
     else:
         print("Invalid direction. Please choose North, South, East, West or Quit.")
     
