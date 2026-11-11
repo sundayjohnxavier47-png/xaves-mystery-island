@@ -27,15 +27,17 @@ while running:
         print(f"Goodbye {name}")
         running = False
     elif answer == "take":
-        if answer in items.get(location, []):
-            inventory.append(answer)
-            items[location].remove(answer)
-            print(f"You have taken the {answer}.")
+        here = items.get(location, [])
+        if here:
+            item = here[0]
+            inventory.append(item)
+            items[location].remove(item)
+            print(f"You picked up the {item}.")
         else:
-            print(f"There is no {answer} here to take.")
+            print("There is nothing to take here.")
     elif answer == "inventory":
         if inventory:
-            print(f"You have the {item} in your inventory:")
+            print(f"You are carrying: {', '.join(inventory)}")
         else:
             print("Your inventory is empty.")
     elif answer in world[location]:
