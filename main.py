@@ -14,7 +14,7 @@ print(f"Hello {name}. \nYou are at {location}")
 
 while running:
     print(f"Location: {location} | Energy: {energy}")
-    answer = input("Choose direction to walk: North, South, East, West or Quit\n the shadows are pointing south\n")
+    answer = input("Choose direction to walk: North, South, East, West or Quit\n" )
     answer = answer.strip().lower()
     if answer == "quit":
         print(f"Goodbye {name}")
